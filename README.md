@@ -30,7 +30,7 @@
 
 A visually engaging, single-page portfolio showcasing my journey in tech — with a modern, animated UI, interactive elements, and smooth transitions to keep visitors hooked and inspired.
 
-🔗 **Live URL:** [https://frontend-challenge-git-main-komal-kalshettis-projects.vercel.app](https://frontend-challenge-stud-kk.vercel.app)
+🔗 **Live URL:** https://frontend-challenge-r1t4iicdu-komal-kalshettis-projects.vercel.app/
 
 
 
