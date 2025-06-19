@@ -195,7 +195,7 @@ Right click index.html → "Open with Live Server"
 
 
 
-## ❤️ Built With
+## Built With ❤️ 
 
-> Built with **❤️**, creativity, **ChatGPT**, and **Claude** — by [Komal Kalshetti](https://www.linkedin.com/in/komal-kalshetti-288832259/).
+
 
