@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Screen Example</title>
+    <link rel="stylesheet" href="style.css" />
+
+   
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loader-container">
+            <div class="loader"></div>
+            <div class="loading-text">Welcome to Komal's Portfolio</div>
+            <div class="loading-subtitle">Loading amazing content...</div>
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content (initially hidden) -->
+    <div class="main-content" id="mainContent">
+        <h1>Welcome!</h1>
+        <p>
+           Lets Explore my portfolio
+        </p>
+        <button class="demo-button" onclick="showLoadingAgain()">
+            Show Loading Screen Again
+        </button>
+    </div>
+
+    <script>
+        // Loading screen functionality
+        window.addEventListener('load', function() {
+            // Simulate loading time (you can adjust this)
+            setTimeout(function() {
+                const loadingScreen = document.getElementById('loadingScreen');
+                const mainContent = document.getElementById('mainContent');
+                
+                // Add fade-out class to loading screen
+                loadingScreen.classList.add('fade-out');
+                
+                // Show main content after loading screen starts fading
+                setTimeout(function() {
+                    mainContent.classList.add('show');
+                }, 500);
+                
+                // Completely remove loading screen after transition
+                setTimeout(function() {
+                    loadingScreen.style.display = 'none';
+                }, 1000);
+            }, 3500); // Adjust this timing as needed
+        });
+
+        // Demo function to show loading screen again
+        function showLoadingAgain() {
+            const loadingScreen = document.getElementById('loadingScreen');
+            const mainContent = document.getElementById('mainContent');
+            
+            // Reset and show loading screen
+            loadingScreen.style.display = 'flex';
+            loadingScreen.classList.remove('fade-out');
+            mainContent.classList.remove('show');
+            
+            // Restart the loading process
+            setTimeout(function() {
+                loadingScreen.classList.add('fade-out');
+                setTimeout(function() {
+                    mainContent.classList.add('show');
+                }, 500);
+                setTimeout(function() {
+                    loadingScreen.style.display = 'none';
+                }, 1000);
+            }, 3500);
+        }
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Komal Kalshetti - Software Engineer</title>
+    <link rel="stylesheet" href="style.css" />
+
+    
+</head>
+<body>
+    <!-- Floating Circle Background -->
+    <div class="floating-elements">
+        <div class="floating-circle circle-1"></div>
+        <div class="floating-circle circle-2"></div>
+        <div class="floating-circle circle-3"></div>
+    </div>
+
+    <!-- Portfolio Highlights -->
+    <div class="container">
+        <div class="ratings-bar">
+            <div class="rating-item">
+                <span class="star">💼</span>
+                <span class="rating-text">Built 10+ Projects</span>
+                <span class="brand-logo">in Web Dev, AI, & UI</span>
+            </div>
+            <div class="rating-item">
+                <span class="star">🎓</span>
+                <span class="rating-text">Computer Science</span>
+                <span class="brand-logo">B.Tech @ WIT, 9.81 CGPA</span>
+            </div>
+            <div class="rating-item">
+                <span class="star">🏆</span>
+                <span class="rating-text">Active Participation</span>
+                <span class="brand-logo">SIH, GSoC, C4GT 2025</span>
+            </div>
+            <div class="rating-item">
+                <span class="star">🛠️</span>
+                <span class="rating-text">Skilled in</span>
+                <span class="brand-logo">React, Tailwind, Python, ML</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section with Parallax -->
+    <div class="parallax-container">
+        <div class="parallax-bg"></div>
+        <div class="hero-content">
+            <h1 class="hero-text">I am an Enthusiastic Learner</h1>
+            <p class="subtitle">Always up for new challenges</p>
+            <div class="cta-section">
+                <a href="https://github.com/Stud-KK" class="cta-button" target="_blank">View GitHub →</a>
+                <a href="https://www.linkedin.com/in/komal-kalshetti-288832259/" class="cta-button" target="_blank">Connect on LinkedIn →</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- About Section -->
+        <section class="section">
+            <h2 class="section-title">About Komal Kalshetti</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>Aspiring software engineer eager to contribute to scalable, high-performance systems through strong backend and algorithmic skills. Currently pursuing B.Tech in Computer Science at Walchand Institute of Technology with an outstanding 9.81 CGPA.</p>
+                    <br>
+                    <p>Passionate about AI, full-stack development, and solving complex problems through innovative technology solutions. Recently completed an internship at Infosys Springboard, where I developed Spring Boot applications and improved system efficiency by 30%.</p>
+                </div>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">9.81</div>
+                        <div class="stat-label">CGPA</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">3+</div>
+                        <div class="stat-label">Major Projects</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">5+</div>
+                        <div class="stat-label">Hackathons</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">30%</div>
+                        <div class="stat-label">System Efficiency Improvement</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Animated Technical Skills Section -->
+        <section class="section animated-skills-section">
+            <h2 class="section-title">Technical Skills ⚡</h2>
+            <div class="skills-matrix" id="skillsMatrix">
+                <!-- Skills will be dynamically populated -->
+            </div>
+        </section>
+
+        <!-- Achievements Carousel -->
+        <section class="section">
+            <h2 class="section-title">Major Achievements</h2>
+            <div class="carousel-container">
+                <div class="carousel-wrapper" id="carousel">
+                    <div class="carousel-slide" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&h=400&fit=crop') center/cover;">
+                        <div class="slide-content">
+                            <h3 class="slide-title">Flipkart Grid 6.0</h3>
+                            <p class="slide-description">Advanced to the submission round out of 327 teams from 400,000 participants, securing top recognition for innovative solutions in e-commerce technology.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=800&h=400&fit=crop') center/cover;">
+                        <div class="slide-content">
+                            <h3 class="slide-title">We For She - Myntra HackerRamp</h3>
+                            <p class="slide-description">Participated in Myntra's women-focused hackathon, developing innovative solutions for fashion technology and e-commerce platforms.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&h=400&fit=crop') center/cover;">
+                        <div class="slide-content">
+                            <h3 class="slide-title">Smart India Hackathon 2024</h3>
+                            <p class="slide-description">Participated in India's biggest hackathon, demonstrating innovation and collaboration skills while solving real-world problems for government and industry.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?w=800&h=400&fit=crop') center/cover;">
+                        <div class="slide-content">
+                            <h3 class="slide-title">NITS Hacks 7.0 - Software Track</h3>
+                            <p class="slide-description">Competed in NIT Silchar's premier hackathon in the Software Track, showcasing advanced programming skills and innovative software solutions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-nav">
+                <span class="nav-dot active" onclick="currentSlide(1)"></span>
+                <span class="nav-dot" onclick="currentSlide(2)"></span>
+                <span class="nav-dot" onclick="currentSlide(3)"></span>
+                <span class="nav-dot" onclick="currentSlide(4)"></span>
+            </div>
+        </section>
+
+        <!-- Featured Projects -->
+        <section class="section">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>🤖 AI Food Expiry System</h3>
+                    <p style="margin: 15px 0; opacity: 0.8;">Full-stack AI system predicting food expiry with React dashboard, SMS alerts, and meal suggestions.</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Flask</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">MongoDB</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>📏 Size Chart Generator</h3>
+                    <p style="margin: 15px 0; opacity: 0.8;">ML-powered size recommendations using clustering algorithms, improving fit accuracy by 25%.</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Scikit-learn</span>
+                        <span class="skill-tag">Streamlit</span>
+                        <span class="skill-tag">ML</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>📄 Offer Letter Portal</h3>
+                    <p style="margin: 15px 0; opacity: 0.8;">Automated PDF generation system reducing processing time by 40% with secure authentication.</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">PHP</span>
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">FPDF</span>
+                        <span class="skill-tag">Security</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="section">
+            <div class="cta-section">
+                <h2 class="section-title">Let's Connect!</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 30px; opacity: 0.9;">Ready to collaborate on innovative projects and tackle new challenges together.</p>
+                <a href="https://github.com/Stud-KK" class="cta-button" target="_blank">Explore My Work →</a>
+                <a href="https://www.linkedin.com/in/komal-kalshetti-288832259/" class="cta-button" target="_blank">Let's Connect →</a>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Skills data with icons
+        const skillSets = [
+            [
+                { name: 'Python', icon: '🐍' },
+                { name: 'Java', icon: '☕' },
+                { name: 'React', icon: '⚛️' },
+                { name: 'Node.js', icon: '🟢' },
+                { name: 'SQL', icon: '🗄️' },
+                { name: 'HTML/CSS', icon: '🎨' },
+                { name: 'Git', icon: '📝' },
+                { name: 'Flask', icon: '🌶️' },
+                { name: 'MongoDB', icon: '🍃' },
+                { name: 'Spring Boot', icon: '🍀' },
+                { name: 'MySQL', icon: '🐬' },
+                { name: 'Linux', icon: '🐧' },
+                { name: 'Streamlit', icon: '📊' },
+                { name: 'Scikit-learn', icon: '🧠' },
+                { name: 'KMeans', icon: '📈' },
+                { name: 'DBSCAN', icon: '🔍' }
+            ],
+            [
+                { name: 'JavaScript', icon: '🟨' },
+                { name: 'TypeScript', icon: '🔷' },
+                { name: 'Vue.js', icon: '💚' },
+                { name: 'Angular', icon: '🔺' },
+                { name: 'Docker', icon: '🐳' },
+                { name: 'AWS', icon: '☁️' },
+                { name: 'Firebase', icon: '🔥' },
+                { name: 'Redis', icon: '🔴' },
+                { name: 'GraphQL', icon: '📊' },
+                { name: 'TensorFlow', icon: '🧠' },
+                { name: 'PyTorch', icon: '🔥' },
+                { name: 'Pandas', icon: '🐼' },
+                { name: 'NumPy', icon: '🔢' },
+                { name: 'Matplotlib', icon: '📈' },
+                { name: 'Seaborn', icon: '🌊' },
+                { name: 'Jupyter', icon: '📓' }
+            ]
+        ];
+
+        let currentSkillSet = 0;
+        const skillsMatrix = document.getElementById('skillsMatrix');
+
+        function displaySkills() {
+            skillsMatrix.innerHTML = '';
+            const currentSkills = skillSets[currentSkillSet];
+            
+            currentSkills.forEach((skill, index) => {
+                const skillItem = document.createElement('div');
+                skillItem.className = 'skill-item';
+                skillItem.innerHTML = `
+                    <span class="skill-icon">${skill.icon}</span>
+                    <span class="skill-name">${skill.name}</span>
+                `;
+                
+                // Stagger the animation
+                setTimeout(() => {
+                    skillItem.classList.add('visible');
+                }, index * 50);
+                
+                skillsMatrix.appendChild(skillItem);
+            });
+            
+            // Switch to next skill set
+            currentSkillSet = (currentSkillSet + 1) % skillSets.length;
+        }
+
+        // Initialize skills display
+        displaySkills();
+        
+        // Auto-switch skills every 3 seconds
+        setInterval(displaySkills, 3000);
+
+        // Carousel functionality
+        let currentSlideIndex = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const dots = document.querySelectorAll('.nav-dot');
+        const carousel = document.getElementById('carousel');
+
+        function showSlide(index) {
+            carousel.style.transform = `translateX(-${index * 100}%)`;
+            
+            dots.forEach(dot => dot.classList.remove('active'));
+            dots[index].classList.add('active');
+            
+            currentSlideIndex = index;
+        }
+
+        function currentSlide(index) {
+            showSlide(index - 1);
+        }
+
+        // Auto-play carousel
+        setInterval(() => {
+            currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+            showSlide(currentSlideIndex);
+        }, 4000);
+
+        // Parallax effect on scroll
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallaxBg = document.querySelector('.parallax-bg');
+            if (parallaxBg) {
+                parallaxBg.style.transform = `translateY(${scrolled * 0.5}px)`;
+            }
+        });
+
+        // Scroll animation observer
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationDelay = '0s';
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections for scroll animations
+        document.querySelectorAll('.section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Smooth scroll for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Enhanced pop-up animations for stat cards
+        const statCards = document.querySelectorAll('.stat-card');
+        statCards.forEach((card, index) => {
+            card.style.animationDelay = `${index * 0.2}s`;
+        });
+
+        // Enhanced pop-up animations for skill categories
+        const skillCategories = document.querySelectorAll('.skill-category');
+        skillCategories.forEach((category, index) => {
+            category.style.animationDelay = `${index * 0.3}s`;
+        });
+
+        // Add floating animation to CTA buttons
+        const ctaButtons = document.querySelectorAll('.cta-button');
+        ctaButtons.forEach(button => {
+            button.addEventListener('mouseenter', () => {
+                button.style.transform = 'translateY(-4px) scale(1.05) rotate(1deg)';
+            });
+            
+            button.addEventListener('mouseleave', () => {
+                button.style.transform = 'translateY(0) scale(1) rotate(0deg)';
+            });
+        });
+
+        // Add sparkle effect to rating items
+        const ratingItems = document.querySelectorAll('.rating-item');
+        ratingItems.forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                item.style.transform = 'scale(1.05)';
+                item.style.background = 'rgba(255, 255, 255, 0.15)';
+            });
+            
+            item.addEventListener('mouseleave', () => {
+                item.style.transform = 'scale(1)';
+                item.style.background = 'rgba(255, 255, 255, 0.1)';
+            });
+        });
+
+        // Add typing effect to hero text
+        function addTypingEffect() {
+            const heroText = document.querySelector('.hero-text');
+            const text = heroText.textContent;
+            heroText.textContent = '';
+            
+            let i = 0;
+            const typeWriter = () => {
+                if (i < text.length) {
+                    heroText.textContent += text.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 100);
+                }
+            };
+            
+            setTimeout(typeWriter, 1000);
+        }
+
+        // Initialize typing effect
+        addTypingEffect();
+
+        // Add pulse effect to floating circles
+        const floatingCircles = document.querySelectorAll('.floating-circle');
+        floatingCircles.forEach(circle => {
+            setInterval(() => {
+                circle.style.transform = 'scale(1.2)';
+                setTimeout(() => {
+                    circle.style.transform = 'scale(1)';
+                }, 500);
+            }, Math.random() * 5000 + 3000);
+        });
+
+        // Add scroll-triggered animations
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+            const windowHeight = window.innerHeight;
+            
+            // Animate sections based on scroll position
+            document.querySelectorAll('.section').forEach((section, index) => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                
+                if (scrollY + windowHeight > sectionTop + 100) {
+                    section.style.opacity = '1';
+                    section.style.transform = 'translateY(0)';
+                    section.style.transition = 'all 0.8s ease-out';
+                }
+            });
+        });
+    </script>
+</body>
+</html>c:\Users\HP\Downloads\photo.jpeg
