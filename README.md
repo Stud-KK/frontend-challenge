@@ -190,12 +190,7 @@ Right click index.html → "Open with Live Server"
 * 🧠 **ChatGPT** by OpenAI — concept support, animation tweaks, content writing
 * 🌤️ **Claude** by Anthropic — enhancement ideas and section structure
 * 🌍 **Vercel** for seamless deployment
-* 📚 Stack Overflow & CSS Tricks for layout references
-
-
-
-
-## Built With ❤️ 
+* 📚 Stack Overflow & CSS Tricks for layout refereence
 
 
 
